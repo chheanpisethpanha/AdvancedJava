@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                    http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd"
+            version="3.1"
+            metadata-complete="true">
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/FirstServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SuccessServlet</servlet-name>
+        <servlet-class>SuccessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SuccessServlet</servlet-name>
+        <url-pattern>/SuccessServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FailServlet</servlet-name>
+        <servlet-class>FailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FailServlet</servlet-name>
+        <url-pattern>/FailServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogOutServlet</servlet-name>
+        <servlet-class>LogOutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogOutServlet</servlet-name>
+        <url-pattern>/LogOutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
