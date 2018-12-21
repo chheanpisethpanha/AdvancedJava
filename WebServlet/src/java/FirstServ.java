@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 /**
  *
  * @author Ztranger
@@ -18,11 +19,16 @@ public class FirstServ extends HttpServlet {
        pw.println("Post method invoked");
        
        String userName = req.getParameter("user");
+       String passWord = req.getParameter("pass");
        
-       if(userName.equalsIgnoreCase("panha"))
+       if(userName.equalsIgnoreCase("panha") && passWord.equals("123" ))
        {
-           RequestDispatcher rd = req.getRequestDispatcher("/SuccessServ");
+           RequestDispatcher rd = req.getRequestDispatcher("/SuccessServ");       
+           //req.setAttribute("userN", userName);
+           HttpSession ses = req.getSession();
+           ses.setAttribute("user", userName);
            rd.forward(req, resp);
+           
        }else {
            RequestDispatcher rdf = req.getRequestDispatcher("/FailServ");
            rdf.include(req, resp);
@@ -58,10 +64,8 @@ public class FirstServ extends HttpServlet {
 //            out.println("</h1>");
         
        
-    }
-    
-   
-    }
+    } 
+  }
 
     
 

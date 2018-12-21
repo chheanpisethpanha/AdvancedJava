@@ -12,6 +12,14 @@
         <servlet-name>FailServ</servlet-name>
         <servlet-class>FailServ</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SecondServ</servlet-name>
+        <servlet-class>SecondServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogOutServ</servlet-name>
+        <servlet-class>LogOutServ</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FirstServ</servlet-name>
         <url-pattern>/FirstServ</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>FailServ</servlet-name>
         <url-pattern>/FailServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecondServ</servlet-name>
+        <url-pattern>/SecondServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOutServ</servlet-name>
+        <url-pattern>/LogOutServ</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -6,23 +6,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  *
  * @author Admin
  */
-public class FailServ extends HttpServlet {
+public class SecondServ extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       String user = (String) req.getAttribute("userN");
+       
        PrintWriter pw = resp.getWriter();
-       pw.println("Invalid Username or Password");
-       resp.setContentType("text/html");
-        pw.println("<a href='LogOutServ'> Logout</a>");
+       pw.println(user);   
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       PrintWriter pw = resp.getWriter();
-       pw.println("Fail from GET");
+
     }
+    
+   
 }

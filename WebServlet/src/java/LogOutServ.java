@@ -1,28 +1,33 @@
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Admin
  */
-public class FailServ extends HttpServlet {
+public class LogOutServ extends HttpServlet {
 
+    public void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession hs = req.getSession();
+        hs.invalidate();
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
+    }
+    
+    
+    
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       PrintWriter pw = resp.getWriter();
-       pw.println("Invalid Username or Password");
-       resp.setContentType("text/html");
-        pw.println("<a href='LogOutServ'> Logout</a>");
+        logout(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       PrintWriter pw = resp.getWriter();
-       pw.println("Fail from GET");
+        logout(req, resp);
     }
+    
 }

@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -20,14 +21,16 @@ public class SuccessServ extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter pw = resp.getWriter();
-        pw.println("Succcess from POST");
+        HttpSession hs = req.getSession();
+        resp.setContentType("text/html");
+        
+        pw.println("Welcome " + hs.getAttribute("user"));
+        pw.println("<a href='LogOutServ'> Logout</a>");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter pw = resp.getWriter();
         pw.println("Succcess from GET");
-    }
-
-    
+    }   
 }
