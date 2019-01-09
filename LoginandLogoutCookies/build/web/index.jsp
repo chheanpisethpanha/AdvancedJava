@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Jan 2, 2019, 12:15:18 PM
+    Created on : Dec 28, 2018, 10:49:50 AM
     Author     : Admin
 --%>
 
@@ -12,10 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="SucessServ" method="POST">
+        <form action="InitServ" method="POST">
             <input type="text" name="user">
-            <input type="email" name="email">
-            <input type="submit" value="click">
+            <input type="submit" value="Login">
         </form>
     </body>
 </html>

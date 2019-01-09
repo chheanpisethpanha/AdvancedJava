@@ -14,9 +14,7 @@
 <!--Filter Mapping-->
     <filter-mapping>
         <filter-name>Filter1</filter-name>
-        <url-pattern>/*</url-pattern>
-        
-<!-- for all servlet use '/*' -->
+        <url-pattern>/*</url-pattern> <!-- for all servlet use '/*' -->
     </filter-mapping>
     <filter-mapping>
         <filter-name>Filter2</filter-name>

@@ -10,13 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 public class InitServ extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter pw = resp.getWriter();
-        pw.print("Inside servlet");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
+            throws ServletException, IOException {
+       
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+            throws ServletException, IOException {
         super.doGet(req, resp); //To change body of generated methods, choose Tools | Templates.
     }
     
