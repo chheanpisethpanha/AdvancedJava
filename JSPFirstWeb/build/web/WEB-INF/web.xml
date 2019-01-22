@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app metadata-complete="true" version="3.1" 
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd">
+    <servlet>
+        <servlet-name>First</servlet-name>
+        <jsp-file>First.jsp</jsp-file>
+        <init-param>
+            <param-name>Color</param-name>
+            <param-value>Pink</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>First</servlet-name>
+        <url-mapping>/First</url-mapping>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Failure</servlet-name>
+        <jsp-file>Failure.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Failure</servlet-name>
+        <url-pattern>/Failure</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Success</servlet-name>
+        <jsp-file>Success.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/Success</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    
+    <!--common for all servlet-->
+    <context-param>
+        <param-name>school</param-name>
+        <param-value>KIT</param-value>
+    </context-param>
+        
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
