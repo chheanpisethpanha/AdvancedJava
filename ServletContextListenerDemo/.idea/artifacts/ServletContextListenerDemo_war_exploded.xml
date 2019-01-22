@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ServletContextListenerDemo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ServletContextListenerDemo_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ServletContextListenerDemo/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ServletContextListenerDemo" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
