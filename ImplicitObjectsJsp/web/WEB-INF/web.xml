@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    
+    <servlet>
+        <servlet-name>Success</servlet-name>
+        <jsp-file>Success.jsp</jsp-file>
+        <init-param>
+            <param-name>color</param-name>
+            <param-value>red</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Failure</servlet-name>
+        <jsp-file>/Failure.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Failure</servlet-name>
+        <url-pattern>/Failure</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>school</param-name>
+        <param-value>KIT</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/Success</url-pattern>
+    </servlet-mapping>
+   
+</web-app>
