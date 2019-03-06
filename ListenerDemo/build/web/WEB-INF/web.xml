@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app metadata-complete="true" version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                     http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd">
+    <context-param>
+        <param-name>Color</param-name>
+        <param-value>Pink</param-value>
+    </context-param>
+    <listener>
+        <listener-class>MyServReqAttListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>MySessionAttListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>MyServContextAttListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>ContextServletListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/RequestServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>ContextAttributeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/ContextServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>SessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/SessionServlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <init-param/>
+</web-app>
