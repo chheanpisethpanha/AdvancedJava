@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                    http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd"
+            version="3.1"
+            metadata-complete="true">
+<!--    <servlet>
+        <servlet-name>Next</servlet-name>
+        <jsp-file>Next.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Next</servlet-name>
+        <url-pattern>/Next.jsp</url-pattern>
+    </servlet-mapping>-->
+    
+<!--    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </servlet-mapping>-->
+    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ErrorPage.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <exception-type>java.lang.ArithmeticException</exception-type>
+        <location>/Error.jsp</location>
+    </error-page>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
